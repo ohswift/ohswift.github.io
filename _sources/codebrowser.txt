@@ -1,0 +1,3 @@
+.. literalinclude:: ../code/getTorrent.py
+   :language: python
+   :linenos:

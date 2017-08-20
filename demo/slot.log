@@ -1,0 +1,534 @@
+[root@cdn-test01 opt]# MegaCli64 -PDList -aALL
+                                     
+Adapter #0
+
+Enclosure Device ID: 32
+Slot Number: 0
+Drive's position: DiskGroup: 1, Span: 0, Arm: 0
+Enclosure position: 1
+Device Id: 0
+WWN: 5000CCA03B8AA6F3
+Sequence Number: 2
+Media Error Count: 4
+Other Error Count: 0
+Predictive Failure Count: 0
+Last Predictive Failure Event Seq Number: 0
+PD Type: SAS
+
+Raw Size: 3.638 TB [0x1d1c0beb0 Sectors]
+Non Coerced Size: 3.637 TB [0x1d1b0beb0 Sectors]
+Coerced Size: 3.637 TB [0x1d1b00000 Sectors]
+Sector Size:  0
+Firmware state: Online, Spun Up
+Device Firmware Level: W1CG
+Shield Counter: 0
+Successful diagnostics completion on :  N/A
+SAS Address(0): 0x5000cca03b8aa6f1
+SAS Address(1): 0x0
+Connected Port Number: 0(path0) 
+Inquiry Data: HGST    HUS724040ALS640 W1CGPBJG7VWX            
+FDE Capable: Not Capable
+FDE Enable: Disable
+Secured: Unsecured
+Locked: Unlocked
+Needs EKM Attention: No
+Foreign State: None 
+Device Speed: 6.0Gb/s 
+Link Speed: 6.0Gb/s 
+Media Type: Hard Disk Device
+Drive Temperature :25C (77.00 F)
+PI Eligibility:  No 
+Drive is formatted for PI information:  No
+PI: No PI
+Port-0 :
+Port status: Active
+Port's Linkspeed: 6.0Gb/s 
+Port-1 :
+Port status: Active
+Port's Linkspeed: Unknown 
+Drive has flagged a S.M.A.R.T alert : No
+
+
+
+Enclosure Device ID: 32
+Slot Number: 1
+Drive's position: DiskGroup: 1, Span: 0, Arm: 1
+Enclosure position: 1
+Device Id: 1
+WWN: 5000CCA03B88FE17
+Sequence Number: 2
+Media Error Count: 0
+Other Error Count: 2
+Predictive Failure Count: 0
+Last Predictive Failure Event Seq Number: 0
+PD Type: SAS
+
+Raw Size: 3.638 TB [0x1d1c0beb0 Sectors]
+Non Coerced Size: 3.637 TB [0x1d1b0beb0 Sectors]
+Coerced Size: 3.637 TB [0x1d1b00000 Sectors]
+Sector Size:  0
+Firmware state: Online, Spun Up
+Device Firmware Level: W1CG
+Shield Counter: 0
+Successful diagnostics completion on :  N/A
+SAS Address(0): 0x5000cca03b88fe15
+SAS Address(1): 0x0
+Connected Port Number: 0(path0) 
+Inquiry Data: HGST    HUS724040ALS640 W1CGPBJEAKSX            
+FDE Capable: Not Capable
+FDE Enable: Disable
+Secured: Unsecured
+Locked: Unlocked
+Needs EKM Attention: No
+Foreign State: None 
+Device Speed: 6.0Gb/s 
+Link Speed: 6.0Gb/s 
+Media Type: Hard Disk Device
+Drive Temperature :25C (77.00 F)
+PI Eligibility:  No 
+Drive is formatted for PI information:  No
+PI: No PI
+Port-0 :
+Port status: Active
+Port's Linkspeed: 6.0Gb/s 
+Port-1 :
+Port status: Active
+Port's Linkspeed: Unknown 
+Drive has flagged a S.M.A.R.T alert : No
+
+
+
+Enclosure Device ID: 32
+Slot Number: 2
+Drive's position: DiskGroup: 1, Span: 0, Arm: 2
+Enclosure position: 1
+Device Id: 2
+WWN: 5000CCA03B8B8F6B
+Sequence Number: 2
+Media Error Count: 0
+Other Error Count: 0
+Predictive Failure Count: 0
+Last Predictive Failure Event Seq Number: 0
+PD Type: SAS
+
+Raw Size: 3.638 TB [0x1d1c0beb0 Sectors]
+Non Coerced Size: 3.637 TB [0x1d1b0beb0 Sectors]
+Coerced Size: 3.637 TB [0x1d1b00000 Sectors]
+Sector Size:  0
+Firmware state: Online, Spun Up
+Device Firmware Level: W1CG
+Shield Counter: 0
+Successful diagnostics completion on :  N/A
+SAS Address(0): 0x5000cca03b8b8f69
+SAS Address(1): 0x0
+Connected Port Number: 0(path0) 
+Inquiry Data: HGST    HUS724040ALS640 W1CGPBJGSAUX            
+FDE Capable: Not Capable
+FDE Enable: Disable
+Secured: Unsecured
+Locked: Unlocked
+Needs EKM Attention: No
+Foreign State: None 
+Device Speed: 6.0Gb/s 
+Link Speed: 6.0Gb/s 
+Media Type: Hard Disk Device
+Drive Temperature :25C (77.00 F)
+PI Eligibility:  No 
+Drive is formatted for PI information:  No
+PI: No PI
+Port-0 :
+Port status: Active
+Port's Linkspeed: 6.0Gb/s 
+Port-1 :
+Port status: Active
+Port's Linkspeed: Unknown 
+Drive has flagged a S.M.A.R.T alert : No
+
+
+
+Enclosure Device ID: 32
+Slot Number: 3
+Drive's position: DiskGroup: 1, Span: 0, Arm: 3
+Enclosure position: 1
+Device Id: 3
+WWN: 5000CCA03B89E0DF
+Sequence Number: 2
+Media Error Count: 0
+Other Error Count: 0
+Predictive Failure Count: 0
+Last Predictive Failure Event Seq Number: 0
+PD Type: SAS
+
+Raw Size: 3.638 TB [0x1d1c0beb0 Sectors]
+Non Coerced Size: 3.637 TB [0x1d1b0beb0 Sectors]
+Coerced Size: 3.637 TB [0x1d1b00000 Sectors]
+Sector Size:  0
+Firmware state: Offline
+Device Firmware Level: W1CG
+Shield Counter: 0
+Successful diagnostics completion on :  N/A
+SAS Address(0): 0x5000cca03b89e0dd
+SAS Address(1): 0x0
+Connected Port Number: 0(path0) 
+Inquiry Data: HGST    HUS724040ALS640 W1CGPBJEUNYX            
+FDE Capable: Not Capable
+FDE Enable: Disable
+Secured: Unsecured
+Locked: Unlocked
+Needs EKM Attention: No
+Foreign State: None 
+Device Speed: 6.0Gb/s 
+Link Speed: 6.0Gb/s 
+Media Type: Hard Disk Device
+Drive Temperature :25C (77.00 F)
+PI Eligibility:  No 
+Drive is formatted for PI information:  No
+PI: No PI
+Port-0 :
+Port status: Active
+Port's Linkspeed: 6.0Gb/s 
+Port-1 :
+Port status: Active
+Port's Linkspeed: Unknown 
+Drive has flagged a S.M.A.R.T alert : No
+
+
+
+Enclosure Device ID: 32
+Slot Number: 4
+Drive's position: DiskGroup: 2, Span: 0, Arm: 0
+Enclosure position: 1
+Device Id: 4
+WWN: 5000CCA03B8ACBBB
+Sequence Number: 2
+Media Error Count: 0
+Other Error Count: 0
+Predictive Failure Count: 0
+Last Predictive Failure Event Seq Number: 0
+PD Type: SAS
+
+Raw Size: 3.638 TB [0x1d1c0beb0 Sectors]
+Non Coerced Size: 3.637 TB [0x1d1b0beb0 Sectors]
+Coerced Size: 3.637 TB [0x1d1b00000 Sectors]
+Sector Size:  0
+Firmware state: Offline
+Device Firmware Level: W1CG
+Shield Counter: 0
+Successful diagnostics completion on :  N/A
+SAS Address(0): 0x5000cca03b8acbb9
+SAS Address(1): 0x0
+Connected Port Number: 0(path0) 
+Inquiry Data: HGST    HUS724040ALS640 W1CGPBJGA9UX            
+FDE Capable: Not Capable
+FDE Enable: Disable
+Secured: Unsecured
+Locked: Unlocked
+Needs EKM Attention: No
+Foreign State: None 
+Device Speed: 6.0Gb/s 
+Link Speed: 6.0Gb/s 
+Media Type: Hard Disk Device
+Drive Temperature :25C (77.00 F)
+PI Eligibility:  No 
+Drive is formatted for PI information:  No
+PI: No PI
+Port-0 :
+Port status: Active
+Port's Linkspeed: 6.0Gb/s 
+Port-1 :
+Port status: Active
+Port's Linkspeed: Unknown 
+Drive has flagged a S.M.A.R.T alert : No
+
+
+
+Enclosure Device ID: 32
+Slot Number: 5
+Drive's position: DiskGroup: 2, Span: 0, Arm: 1
+Enclosure position: 1
+Device Id: 5
+WWN: 5000CCA03B8B698F
+Sequence Number: 2
+Media Error Count: 0
+Other Error Count: 0
+Predictive Failure Count: 0
+Last Predictive Failure Event Seq Number: 0
+PD Type: SAS
+
+Raw Size: 3.638 TB [0x1d1c0beb0 Sectors]
+Non Coerced Size: 3.637 TB [0x1d1b0beb0 Sectors]
+Coerced Size: 3.637 TB [0x1d1b00000 Sectors]
+Sector Size:  0
+Firmware state: Online, Spun Up
+Device Firmware Level: W1CG
+Shield Counter: 0
+Successful diagnostics completion on :  N/A
+SAS Address(0): 0x5000cca03b8b698d
+SAS Address(1): 0x0
+Connected Port Number: 0(path0) 
+Inquiry Data: HGST    HUS724040ALS640 W1CGPBJGNUNX            
+FDE Capable: Not Capable
+FDE Enable: Disable
+Secured: Unsecured
+Locked: Unlocked
+Needs EKM Attention: No
+Foreign State: None 
+Device Speed: 6.0Gb/s 
+Link Speed: 6.0Gb/s 
+Media Type: Hard Disk Device
+Drive Temperature :25C (77.00 F)
+PI Eligibility:  No 
+Drive is formatted for PI information:  No
+PI: No PI
+Port-0 :
+Port status: Active
+Port's Linkspeed: 6.0Gb/s 
+Port-1 :
+Port status: Active
+Port's Linkspeed: Unknown 
+Drive has flagged a S.M.A.R.T alert : No
+
+
+
+Enclosure Device ID: 32
+Slot Number: 6
+Drive's position: DiskGroup: 2, Span: 0, Arm: 2
+Enclosure position: 1
+Device Id: 6
+WWN: 5000CCA03B892423
+Sequence Number: 2
+Media Error Count: 0
+Other Error Count: 0
+Predictive Failure Count: 0
+Last Predictive Failure Event Seq Number: 0
+PD Type: SAS
+
+Raw Size: 3.638 TB [0x1d1c0beb0 Sectors]
+Non Coerced Size: 3.637 TB [0x1d1b0beb0 Sectors]
+Coerced Size: 3.637 TB [0x1d1b00000 Sectors]
+Sector Size:  0
+Firmware state: Online, Spun Up
+Device Firmware Level: W1CG
+Shield Counter: 0
+Successful diagnostics completion on :  N/A
+SAS Address(0): 0x5000cca03b892421
+SAS Address(1): 0x0
+Connected Port Number: 0(path0) 
+Inquiry Data: HGST    HUS724040ALS640 W1CGPBJEE39X            
+FDE Capable: Not Capable
+FDE Enable: Disable
+Secured: Unsecured
+Locked: Unlocked
+Needs EKM Attention: No
+Foreign State: None 
+Device Speed: 6.0Gb/s 
+Link Speed: 6.0Gb/s 
+Media Type: Hard Disk Device
+Drive Temperature :25C (77.00 F)
+PI Eligibility:  No 
+Drive is formatted for PI information:  No
+PI: No PI
+Port-0 :
+Port status: Active
+Port's Linkspeed: 6.0Gb/s 
+Port-1 :
+Port status: Active
+Port's Linkspeed: Unknown 
+Drive has flagged a S.M.A.R.T alert : No
+
+
+
+Enclosure Device ID: 32
+Slot Number: 7
+Drive's position: DiskGroup: 2, Span: 0, Arm: 3
+Enclosure position: 1
+Device Id: 7
+WWN: 5000CCA03B893EF7
+Sequence Number: 2
+Media Error Count: 0
+Other Error Count: 0
+Predictive Failure Count: 0
+Last Predictive Failure Event Seq Number: 0
+PD Type: SAS
+
+Raw Size: 3.638 TB [0x1d1c0beb0 Sectors]
+Non Coerced Size: 3.637 TB [0x1d1b0beb0 Sectors]
+Coerced Size: 3.637 TB [0x1d1b00000 Sectors]
+Sector Size:  0
+Firmware state: Online, Spun Up
+Device Firmware Level: W1CG
+Shield Counter: 0
+Successful diagnostics completion on :  N/A
+SAS Address(0): 0x5000cca03b893ef5
+SAS Address(1): 0x0
+Connected Port Number: 0(path0) 
+Inquiry Data: HGST    HUS724040ALS640 W1CGPBJEGWPX            
+FDE Capable: Not Capable
+FDE Enable: Disable
+Secured: Unsecured
+Locked: Unlocked
+Needs EKM Attention: No
+Foreign State: None 
+Device Speed: 6.0Gb/s 
+Link Speed: 6.0Gb/s 
+Media Type: Hard Disk Device
+Drive Temperature :25C (77.00 F)
+PI Eligibility:  No 
+Drive is formatted for PI information:  No
+PI: No PI
+Port-0 :
+Port status: Active
+Port's Linkspeed: 6.0Gb/s 
+Port-1 :
+Port status: Active
+Port's Linkspeed: Unknown 
+Drive has flagged a S.M.A.R.T alert : No
+
+
+
+Enclosure Device ID: 32
+Slot Number: 9
+Drive's position: DiskGroup: 3, Span: 0, Arm: 1
+Enclosure position: 1
+Device Id: 9
+WWN: 5000CCA03B8B558F
+Sequence Number: 2
+Media Error Count: 0
+Other Error Count: 0
+Predictive Failure Count: 0
+Last Predictive Failure Event Seq Number: 0
+PD Type: SAS
+
+Raw Size: 3.638 TB [0x1d1c0beb0 Sectors]
+Non Coerced Size: 3.637 TB [0x1d1b0beb0 Sectors]
+Coerced Size: 3.637 TB [0x1d1b00000 Sectors]
+Sector Size:  0
+Firmware state: Online, Spun Up
+Device Firmware Level: W1CG
+Shield Counter: 0
+Successful diagnostics completion on :  N/A
+SAS Address(0): 0x5000cca03b8b558d
+SAS Address(1): 0x0
+Connected Port Number: 0(path0) 
+Inquiry Data: HGST    HUS724040ALS640 W1CGPBJGMHBX            
+FDE Capable: Not Capable
+FDE Enable: Disable
+Secured: Unsecured
+Locked: Unlocked
+Needs EKM Attention: No
+Foreign State: None 
+Device Speed: 6.0Gb/s 
+Link Speed: 6.0Gb/s 
+Media Type: Hard Disk Device
+Drive Temperature :25C (77.00 F)
+PI Eligibility:  No 
+Drive is formatted for PI information:  No
+PI: No PI
+Port-0 :
+Port status: Active
+Port's Linkspeed: 6.0Gb/s 
+Port-1 :
+Port status: Active
+Port's Linkspeed: Unknown 
+Drive has flagged a S.M.A.R.T alert : No
+
+
+
+Enclosure Device ID: 32
+Slot Number: 10
+Drive's position: DiskGroup: 3, Span: 0, Arm: 2
+Enclosure position: 1
+Device Id: 10
+WWN: 5000CCA03B8B900B
+Sequence Number: 2
+Media Error Count: 0
+Other Error Count: 0
+Predictive Failure Count: 0
+Last Predictive Failure Event Seq Number: 0
+PD Type: SAS
+
+Raw Size: 3.638 TB [0x1d1c0beb0 Sectors]
+Non Coerced Size: 3.637 TB [0x1d1b0beb0 Sectors]
+Coerced Size: 3.637 TB [0x1d1b00000 Sectors]
+Sector Size:  0
+Firmware state: Online, Spun Up
+Device Firmware Level: W1CG
+Shield Counter: 0
+Successful diagnostics completion on :  N/A
+SAS Address(0): 0x5000cca03b8b9009
+SAS Address(1): 0x0
+Connected Port Number: 0(path0) 
+Inquiry Data: HGST    HUS724040ALS640 W1CGPBJGSD3X            
+FDE Capable: Not Capable
+FDE Enable: Disable
+Secured: Unsecured
+Locked: Unlocked
+Needs EKM Attention: No
+Foreign State: None 
+Device Speed: 6.0Gb/s 
+Link Speed: 6.0Gb/s 
+Media Type: Hard Disk Device
+Drive Temperature :25C (77.00 F)
+PI Eligibility:  No 
+Drive is formatted for PI information:  No
+PI: No PI
+Port-0 :
+Port status: Active
+Port's Linkspeed: 6.0Gb/s 
+Port-1 :
+Port status: Active
+Port's Linkspeed: Unknown 
+Drive has flagged a S.M.A.R.T alert : No
+
+
+
+Enclosure Device ID: 32
+Slot Number: 11
+Drive's position: DiskGroup: 3, Span: 0, Arm: 3
+Enclosure position: 1
+Device Id: 11
+WWN: 5000CCA03B8B1773
+Sequence Number: 2
+Media Error Count: 0
+Other Error Count: 0
+Predictive Failure Count: 0
+Last Predictive Failure Event Seq Number: 0
+PD Type: SAS
+
+Raw Size: 3.638 TB [0x1d1c0beb0 Sectors]
+Non Coerced Size: 3.637 TB [0x1d1b0beb0 Sectors]
+Coerced Size: 3.637 TB [0x1d1b00000 Sectors]
+Sector Size:  0
+Firmware state: Online, Spun Up
+Device Firmware Level: W1CG
+Shield Counter: 0
+Successful diagnostics completion on :  N/A
+SAS Address(0): 0x5000cca03b8b1771
+SAS Address(1): 0x0
+Connected Port Number: 0(path0) 
+Inquiry Data: HGST    HUS724040ALS640 W1CGPBJGHB4X            
+FDE Capable: Not Capable
+FDE Enable: Disable
+Secured: Unsecured
+Locked: Unlocked
+Needs EKM Attention: No
+Foreign State: None 
+Device Speed: 6.0Gb/s 
+Link Speed: 6.0Gb/s 
+Media Type: Hard Disk Device
+Drive Temperature :25C (77.00 F)
+PI Eligibility:  No 
+Drive is formatted for PI information:  No
+PI: No PI
+Port-0 :
+Port status: Active
+Port's Linkspeed: 6.0Gb/s 
+Port-1 :
+Port status: Active
+Port's Linkspeed: Unknown 
+Drive has flagged a S.M.A.R.T alert : No
+
+
+
+
+Exit Code: 0x00

@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>4. python常见应用 &mdash; Python入门 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Python入门 1.0.0 documentation" href="index.html" />
+    <link rel="next" title="5. TODO: 语言的特性与思想" href="chapter5.html" />
+    <link rel="prev" title="3. python语言基础语法" href="chapter3.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="chapter5.html" title="5. TODO: 语言的特性与思想"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="chapter3.html" title="3. python语言基础语法"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Python入门 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">4. python常见应用</a><ul>
+<li><a class="reference internal" href="#id1">4.1. 计算器、字符编码</a><ul>
+<li><a class="reference internal" href="#id2">4.1.1. 计算器</a></li>
+<li><a class="reference internal" href="#id3">4.1.2. 编码转换</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">4.2. 文本处理</a><ul>
+<li><a class="reference internal" href="#demo">4.2.1. demo</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">4.3. 测试网络发包</a></li>
+<li><a class="reference internal" href="#wxpythongui">4.4. wxPython编写gui程序</a></li>
+<li><a class="reference internal" href="#django">4.5. Django部署网站</a></li>
+<li><a class="reference internal" href="#sphinx-doc">4.6. sphinx-doc编写文档</a><ul>
+<li><a class="reference internal" href="#plain-text-vs-wysiwyg">4.6.1. plain text VS. WYSIWYG</a></li>
+<li><a class="reference internal" href="#id6">4.6.2. sphinx-doc的安装</a></li>
+<li><a class="reference internal" href="#sphinx">4.6.3. sphinx使用</a></li>
+<li><a class="reference internal" href="#id7">4.6.4. demo</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">4.7. 随堂练习</a></li>
+<li><a class="reference internal" href="#one-more-thing">4.8. One more thing: 爬虫</a></li>
+<li><a class="reference internal" href="#id9">4.9. 兴趣练习</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="chapter3.html"
+                        title="previous chapter">3. python语言基础语法</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="chapter5.html"
+                        title="next chapter">5. TODO: 语言的特性与思想</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/chapter4.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="python">
+<h1>4. python常见应用<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>4.1. 计算器、字符编码<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>4.1.1. 计算器<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>掌握了python的基本语法后，可以使用python shell来代替各平台带的计算器了:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">50</span><span class="o">-</span><span class="mi">5</span><span class="o">*</span><span class="mi">6</span><span class="p">)</span><span class="o">/</span><span class="mf">4.0</span>      <span class="c"># 数学表达式</span>
+<span class="go">5.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">=</span><span class="mi">100</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">hex</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>          <span class="c"># 十六进制</span>
+<span class="go">&#39;0x64&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">oct</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>          <span class="c"># 八进制</span>
+<span class="go">&#39;0144&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">math</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">4.0</span><span class="p">)</span>
+<span class="go">0.70710678118654757</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">10.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">8.0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>4.1.2. 编码转换<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">查看ascii码值:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">ord</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">)</span>        <span class="c"># 字母转数值</span>
+<span class="go">97</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">chr</span><span class="p">(</span><span class="mi">97</span><span class="p">)</span>         <span class="c"># 数值转字母</span>
+<span class="go">&#39;a&#39;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>4.2. 文本处理<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>简单的解析可以使用正则表达式来，第3章已经举了个解析objective-c获取类中属性的例子。</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">正则对多重嵌套的处理会有问题，如html中&lt;table&gt;又有一个table，那解析就会乱掉。这时就要用
+更专门的库了来解析html了，如BeautifulSoup就比较方便，可以用它做爬虫什么的。</p>
+</div>
+<div class="section" id="demo">
+<h3>4.2.1. demo<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h3>
+<p>展示把几个简单的java类的定义转换成objective-c的类定义。</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>4.3. 测试网络发包<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">使用pcurl构造http get、post请求，在第3章中已经给了例子</p>
+</li>
+<li><p class="first">使用struct的pack、unpack快速生成、解析网络包:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">struct</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pack</span><span class="p">(</span><span class="s">&#39;hhl&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">&#39;\x00\x01\x00\x02\x00\x00\x00\x03&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">unpack</span><span class="p">(</span><span class="s">&#39;hhl&#39;</span><span class="p">,</span> <span class="s">&#39;</span><span class="se">\x00\x01\x00\x02\x00\x00\x00\x03</span><span class="s">&#39;</span><span class="p">)</span>
+<span class="go">(1, 2, 3)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">calcsize</span><span class="p">(</span><span class="s">&#39;hhl&#39;</span><span class="p">)</span>
+<span class="go">8</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>其中，类型对照如下:</p>
+<a class="reference internal image-reference" href="_images/4.1.png"><img alt="_images/4.1.png" src="_images/4.1.png" style="width: 584px;" /></a>
+</div>
+<div class="section" id="wxpythongui">
+<h2>4.4. wxPython编写gui程序<a class="headerlink" href="#wxpythongui" title="Permalink to this headline">¶</a></h2>
+<p>wxwidgets是一个跨平台的GUI库，与qt类似，现在比qt活跃。wxPython是python对应的库。一个简单的窗口如下:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">wx</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">wx</span><span class="o">.</span><span class="n">PySimpleApp</span><span class="p">()</span>
+<span class="n">frame</span> <span class="o">=</span> <span class="n">wx</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span> <span class="bp">None</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s">&#39;&#39;</span> <span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">SetToolTip</span><span class="p">(</span> <span class="n">wx</span><span class="o">.</span><span class="n">ToolTip</span><span class="p">(</span> <span class="s">&#39;This is a frame&#39;</span> <span class="p">)</span> <span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">SetCursor</span><span class="p">(</span> <span class="n">wx</span><span class="o">.</span><span class="n">StockCursor</span><span class="p">(</span> <span class="n">wx</span><span class="o">.</span><span class="n">CURSOR_MAGNIFIER</span> <span class="p">)</span> <span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">SetPosition</span><span class="p">(</span> <span class="n">wx</span><span class="o">.</span><span class="n">Point</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">SetSize</span><span class="p">(</span> <span class="n">wx</span><span class="o">.</span><span class="n">Size</span><span class="p">(</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">250</span> <span class="p">)</span> <span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span> <span class="s">&#39;simple2.py&#39;</span> <span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">Show</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">MainLoop</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="django">
+<h2>4.5. Django部署网站<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h2>
+<p>Django是python的web框架。有了它，就可以使用python来写网页了。现在很多人已经开始用它来部署网站了，如国内新浪云SAE，就同时支持php建站和django建站。
+有兴趣可以玩下。</p>
+</div>
+<div class="section" id="sphinx-doc">
+<h2>4.6. sphinx-doc编写文档<a class="headerlink" href="#sphinx-doc" title="Permalink to this headline">¶</a></h2>
+<p>sphinx-doc是一种基于python的文档编写工具。python的官方帮助文档就是使用它编写的(本文也是哈)。 sphinx-doc是reStructuredText，即使用带有简单语法的文本文件
+来编写文件，然后通过编译，可以生成html,epub,man,pdf等多种格式。</p>
+<div class="section" id="plain-text-vs-wysiwyg">
+<h3>4.6.1. plain text VS. WYSIWYG<a class="headerlink" href="#plain-text-vs-wysiwyg" title="Permalink to this headline">¶</a></h3>
+<p>使用文本文件编写，再使用工具编译生成文档(tex,docbook,sphinx都可算这个阵营)，和所见即所得(微软的word,mac的page等)的编写方式相比有啥优缺点呢？</p>
+<p><strong>优点</strong></p>
+<ul class="simple">
+<li>开源跨平台，文本文件任何平台都可以打开，编译工具也可以在任何平台运行</li>
+<li>能产生多种格式的文档，甚至可以简单地转为博客的markdown语法</li>
+<li>能够生成html等格式，便于发布交流，如发到网上，大家都可以看到了</li>
+<li>由于是文本，方便版本控制，也可以加注释，多人编写、合并文档更方便</li>
+<li>WYSIWYG的编写，如果加载图片多了，会导致越来越卡，而plain text只是include一个文件，编译后才会加载</li>
+<li>基于网页的技术可以方便地调整文档格式，编写时可以更加注重内容</li>
+<li>插件较多，如特别适合各种代码的插入、语法高亮等</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul class="simple">
+<li>没有WYSIWYG直观，只能编译后才能生成实际的文档，才能看到效果</li>
+<li>国内用的人比较少</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>4.6.2. sphinx-doc的安装<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>使用pip安装sphinx:</p>
+<div class="highlight-python"><div class="highlight"><pre>pip install sphinx
+</pre></div>
+</div>
+</div>
+<div class="section" id="sphinx">
+<h3>4.6.3. sphinx使用<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h3>
+<p>官方文档: <a class="reference external" href="http://sphinx-doc.org/contents.html">http://sphinx-doc.org/contents.html</a></p>
+<p>中译文地址: <a class="reference external" href="http://zh-sphinx-doc.readthedocs.org/en/latest/contents.html">http://zh-sphinx-doc.readthedocs.org/en/latest/contents.html</a></p>
+</div>
+<div class="section" id="id7">
+<h3>4.6.4. demo<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>用sphinx创建一个文档工程。并加入一些简单的内容</p>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>4.7. 随堂练习<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>假设使用python调用megacli已经获取到服务器磁盘的状态，并保存为slot.log，其中一个Slot的信息(其中关键的4行已经用高亮标出)如下:</p>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">Enclosure</span> <span class="n">Device</span> <span class="n">ID</span><span class="p">:</span> <span class="mi">32</span>
+<span class="hll"><span class="n">Slot</span> <span class="n">Number</span><span class="p">:</span> <span class="mi">1</span>
+</span><span class="n">Drive</span><span class="s">&#39;s position: DiskGroup: 1, Span: 0, Arm: 1</span>
+<span class="n">Enclosure</span> <span class="n">position</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Device</span> <span class="n">Id</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">WWN</span><span class="p">:</span> <span class="mi">5000</span><span class="n">CCA03B88FE17</span>
+<span class="n">Sequence</span> <span class="n">Number</span><span class="p">:</span> <span class="mi">2</span>
+<span class="hll"><span class="n">Media</span> <span class="n">Error</span> <span class="n">Count</span><span class="p">:</span> <span class="mi">0</span>
+</span><span class="hll"><span class="n">Other</span> <span class="n">Error</span> <span class="n">Count</span><span class="p">:</span> <span class="mi">2</span>
+</span><span class="n">Predictive</span> <span class="n">Failure</span> <span class="n">Count</span><span class="p">:</span> <span class="mi">0</span>
+<span class="n">Last</span> <span class="n">Predictive</span> <span class="n">Failure</span> <span class="n">Event</span> <span class="n">Seq</span> <span class="n">Number</span><span class="p">:</span> <span class="mi">0</span>
+<span class="n">PD</span> <span class="n">Type</span><span class="p">:</span> <span class="n">SAS</span>
+
+<span class="n">Raw</span> <span class="n">Size</span><span class="p">:</span> <span class="mf">3.638</span> <span class="n">TB</span> <span class="p">[</span><span class="mh">0x1d1c0beb0</span> <span class="n">Sectors</span><span class="p">]</span>
+<span class="n">Non</span> <span class="n">Coerced</span> <span class="n">Size</span><span class="p">:</span> <span class="mf">3.637</span> <span class="n">TB</span> <span class="p">[</span><span class="mh">0x1d1b0beb0</span> <span class="n">Sectors</span><span class="p">]</span>
+<span class="n">Coerced</span> <span class="n">Size</span><span class="p">:</span> <span class="mf">3.637</span> <span class="n">TB</span> <span class="p">[</span><span class="mh">0x1d1b00000</span> <span class="n">Sectors</span><span class="p">]</span>
+<span class="n">Sector</span> <span class="n">Size</span><span class="p">:</span>  <span class="mi">0</span>
+<span class="hll"><span class="n">Firmware</span> <span class="n">state</span><span class="p">:</span> <span class="n">Online</span><span class="p">,</span> <span class="n">Spun</span> <span class="n">Up</span>
+</span><span class="n">Device</span> <span class="n">Firmware</span> <span class="n">Level</span><span class="p">:</span> <span class="n">W1CG</span>
+<span class="n">Shield</span> <span class="n">Counter</span><span class="p">:</span> <span class="mi">0</span>
+<span class="n">Successful</span> <span class="n">diagnostics</span> <span class="n">completion</span> <span class="n">on</span> <span class="p">:</span>  <span class="n">N</span><span class="o">/</span><span class="n">A</span>
+<span class="n">SAS</span> <span class="n">Address</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span> <span class="mh">0x5000cca03b88fe15</span>
+<span class="n">SAS</span> <span class="n">Address</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="mh">0x0</span>
+<span class="n">Connected</span> <span class="n">Port</span> <span class="n">Number</span><span class="p">:</span> <span class="mi">0</span><span class="p">(</span><span class="n">path0</span><span class="p">)</span>
+<span class="n">Inquiry</span> <span class="n">Data</span><span class="p">:</span> <span class="n">HGST</span>    <span class="n">HUS724040ALS640</span> <span class="n">W1CGPBJEAKSX</span>
+<span class="n">FDE</span> <span class="n">Capable</span><span class="p">:</span> <span class="n">Not</span> <span class="n">Capable</span>
+<span class="n">FDE</span> <span class="n">Enable</span><span class="p">:</span> <span class="n">Disable</span>
+<span class="n">Secured</span><span class="p">:</span> <span class="n">Unsecured</span>
+<span class="n">Locked</span><span class="p">:</span> <span class="n">Unlocked</span>
+<span class="n">Needs</span> <span class="n">EKM</span> <span class="n">Attention</span><span class="p">:</span> <span class="n">No</span>
+<span class="n">Foreign</span> <span class="n">State</span><span class="p">:</span> <span class="bp">None</span>
+<span class="n">Device</span> <span class="n">Speed</span><span class="p">:</span> <span class="mf">6.0</span><span class="n">Gb</span><span class="o">/</span><span class="n">s</span>
+<span class="n">Link</span> <span class="n">Speed</span><span class="p">:</span> <span class="mf">6.0</span><span class="n">Gb</span><span class="o">/</span><span class="n">s</span>
+<span class="n">Media</span> <span class="n">Type</span><span class="p">:</span> <span class="n">Hard</span> <span class="n">Disk</span> <span class="n">Device</span>
+<span class="n">Drive</span> <span class="n">Temperature</span> <span class="p">:</span><span class="mi">25</span><span class="n">C</span> <span class="p">(</span><span class="mf">77.00</span> <span class="n">F</span><span class="p">)</span>
+<span class="n">PI</span> <span class="n">Eligibility</span><span class="p">:</span>  <span class="n">No</span>
+<span class="n">Drive</span> <span class="ow">is</span> <span class="n">formatted</span> <span class="k">for</span> <span class="n">PI</span> <span class="n">information</span><span class="p">:</span>  <span class="n">No</span>
+<span class="n">PI</span><span class="p">:</span> <span class="n">No</span> <span class="n">PI</span>
+<span class="n">Port</span><span class="o">-</span><span class="mi">0</span> <span class="p">:</span>
+<span class="n">Port</span> <span class="n">status</span><span class="p">:</span> <span class="n">Active</span>
+<span class="n">Port</span><span class="s">&#39;s Linkspeed: 6.0Gb/s</span>
+<span class="n">Port</span><span class="o">-</span><span class="mi">1</span> <span class="p">:</span>
+<span class="n">Port</span> <span class="n">status</span><span class="p">:</span> <span class="n">Active</span>
+<span class="n">Port</span><span class="s">&#39;s Linkspeed: Unknown</span>
+<span class="n">Drive</span> <span class="n">has</span> <span class="n">flagged</span> <span class="n">a</span> <span class="n">S</span><span class="o">.</span><span class="n">M</span><span class="o">.</span><span class="n">A</span><span class="o">.</span><span class="n">R</span><span class="o">.</span><span class="n">T</span> <span class="n">alert</span> <span class="p">:</span> <span class="n">No</span>
+</pre></div>
+</td></tr></table></div>
+<p>现假设，一共有12个Slot，12个Slot的输出，保存在文件 <a class="reference external" href="demo/slot.log">slot.log</a> 中，请使用python的正则表达式，从该文件中提取如下内容:</p>
+<ol class="arabic simple">
+<li>打印磁盘状态异常信息, <tt class="docutils literal"><span class="pre">Firmware</span> <span class="pre">state</span></tt> 不为 <tt class="docutils literal"><span class="pre">Online,</span> <span class="pre">Spun</span> <span class="pre">Up</span></tt> 即可认为异常，打印所有异常磁盘的 <tt class="docutils literal"><span class="pre">Slot</span> <span class="pre">Number</span></tt> 及 <tt class="docutils literal"><span class="pre">Firmware</span> <span class="pre">state</span></tt></li>
+<li>打印被拔掉的磁盘Slot号, 如果磁盘被拔掉，则该文件中Slot Number不会显示出来(假设当前总共有12个Slot插槽，正常情况下Slot Number应该从0到11)</li>
+<li>当 <tt class="docutils literal"><span class="pre">Media</span> <span class="pre">Error</span> <span class="pre">Count</span></tt> 或 <tt class="docutils literal"><span class="pre">Other</span> <span class="pre">Error</span> <span class="pre">Count</span></tt> 不为0，说明磁盘发生了错误，找到该Slot，并打印错误个数</li>
+</ol>
+<p>正确的输出应该像下面这样:</p>
+<div class="highlight-python"><div class="highlight"><pre>Disk(s) abnormal list:
+    Slot 3 Offline
+    Slot 4 Offline
+Disk(s) absent:
+    Slot 8
+Disk(s) error:
+    Slot 0 error, MediaError 4, OtherError 0
+    Slot 1 error, MediaError 0, OtherError 2
+</pre></div>
+</div>
+</div>
+<div class="section" id="one-more-thing">
+<h2>4.8. One more thing: 爬虫<a class="headerlink" href="#one-more-thing" title="Permalink to this headline">¶</a></h2>
+<p>爬虫可以使用任何语言，如果你只是做一个简单功能、不考虑效率的爬虫，用脚本是最快的。有些网站的网页相当简单，有些甚至直接使用正则表达式就能全部匹配出想要的结果。为了让大家对python脚本更有兴趣，这里提供一个脚本，让大家学习，它能实现从xxx网站上，批量下载种子，哈哈，[ <a class="reference external" href="codebrowser.html">点击浏览代码</a> ]</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">用脚本爬虫，爬href的链接是比较容易的，但是有些跳转链接是用js实现的，这些如果要爬的话，需要解释js，或者效率低点的做法，搞个ui，调用系统的浏览器控件来处理。</p>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>4.9. 兴趣练习<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><dl class="first docutils">
+<dt>使用python编写一个自动代码生成器</dt>
+<dd><p class="first last">把常用的实现某些功能的代码归类，tag化，以后如果要用，只要使用关键字进行搜索，就能把代码提取出来。</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>使用sphinx编写一份教程，并发布</dt>
+<dd><p class="first last">选一个你比较熟悉的领域，使用sphinx编写入门教程或笔记。</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="chapter5.html" title="5. TODO: 语言的特性与思想"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="chapter3.html" title="3. python语言基础语法"
+             >previous</a> |</li>
+        <li><a href="index.html">Python入门 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 俞伟山.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

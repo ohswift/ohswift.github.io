@@ -1,0 +1,212 @@
+python环境搭建
+=================
+
+python发展到目前主要形成两个版本分析,2.7.x系统和3.x系列。由于两个系列之间的语法存在较大差异，所以建议选择一个分支。如果你要兼容以前老版本(一般redhat系的服务器操作系统随系统安装的python版本都是2.7以下的)建议选择2.7分支学习。如果你是从头学习python，并且只在比较新的系统上运行，那可以使用3.x的语法，设计更合理，使用更加简洁，目前支持的库也比较齐全了。
+
+
+安装python环境
+----------------------
+我们这里选择2.7.x的语法。在*NIX系统下默认已经安装有python环境了，只是python的交互shell比较弱，可以再安装个ipython软件，可以智能补全，高亮等。
+
+这里，我们主要介绍window下的安装步骤:
+
+1) 下载python2.7安装包
+2) 安装python
+3) 添加到系统路径，如python安装到 ``C:\python27`` 下，则添加 ``;C:\Python27;C:\Python27\Scripts`` 到系统环境变量Path的后面，后面那个路径一般是easy_install，pip等扩展工具安装的目录。
+
+安装完python包后，python自带一个交互式shell，一个命令行，及一些文档。此时就可以开始根据“Python Manuals"文档中的Tutorial来快速入门了。
+
+.. image:: ../images/2.0.1.png
+    :width: 409   
+    
+Python Shell界面
+    
+.. image:: ../images/2.0.2.png
+    :width: 685 
+
+使用tab或 Alt+/ 进行补全提示，使用alt+p和alt+n进行历史命令选择     
+
+安装python扩展模块
+----------------------
+
+这里介绍如何在python下安装扩展模块。python跟java一样，拥有很多库，基本上你想用的库都能在python官网上找到。python模块的安装一般有三种:
+
+* 只有单个py文件，可以直接拷贝到 ``Lib/site-package`` 下，
+* 下载tar格式的扩展包，并使用扩展包中的setup.py(一般正规的发布都会带这个脚本)安装
+* window下，有 `Unofficial Windows Binaries`_ 的exe安装包(目前已变为whl文件，使用pip可以离线安装)
+* 使用pip,easy_install等自动化工具，自动搜索、下载、安装所需的模块
+
+注意，这执行pip或easy_install命令时，要把Scripts路径设置到系统路径下，像前面提到的那样。下面主要介绍第2, 4方法
+
+.. note:: 
+
+    最新版本的2.7.9已经默认安装上easy_install和pip了。只要加 ``;C:\Python27;C:\Python27\Scripts`` 到系统Path里就行了。
+
+手动安装
+++++++++++
+1) 从 `Pypi`_ 或 `github`_ 等地方下载tar包，并解压
+2) python setup.py install
+
+easy_install安装和使用
+++++++++++++++++++++++++++++++++++++
+
+1) 下载 `ez_setup`_ 脚本 
+2) python ez_setup
+3) easy_install xxx
+
+
+pip安装和使用[**推荐**]
+++++++++++++++++++++++++++++++++++++
+
+1) 下载 `get_pip`_ 脚本 
+2) python get-pip.py
+3) pip提供更多安装模块选项::
+
+    安裝：pip install xxx
+    更新：pip install -U xxx
+    移除：pip uninstall xxx
+    搜索：pip search xxx
+    帮助：pip help
+
+
+例如，要安装sphinx文档编写工具，则使用如下命令::
+
+    pip install sphinx
+
+
+Eclipse+Pydev环境搭建
+----------------------
+作为老牌的IDE，Eclipse几乎所有的编程语言都有相应的插件，而Python语言对应的是Pydev。
+
+安装Pydev
+++++++++++++++++++++++
+从网站下载pydev的压缩包[`点击下载pydev`_  ]，解压出来会有feature和plugin两个目录，把它与Eclipse安装目录下的这几个目录合并就行了。
+
+另外也可以使用Eclipse的安装插件的功能
+
+* 在Eclipse中找到Help菜单，进入Install New Software…选项。
+
+.. image:: ../images/2.1.png
+    :width: 705   
+
+* 点击Add…，Name可以随便是什么，我输入的是PyDev，Location是http://pydev.org/updates。点击OK。
+
+.. image:: ../images/2.2.png
+    :width: 485
+
+* 等待一下，便可以在选择栏里看到各个选项。
+
+.. image:: ../images/2.3.png
+    :width: 302   
+    
+* 选择PyDev，然后一路Next，进入安装路径选择界面，使用默认设置，然后Finish。PyDev安装好后，需要重启Eclipse。
+
+
+设置python
+++++++++++++++++++++++
+PyDev安装好之后，需要配置解释器。在 Eclipse 菜单栏中，选择Window > Preferences > Pydev > Interpreter – Python，在此配置 Python。首先需要添加已安装的解释器，如果python已经配置了系统环境变量，这里只要点击auto config就行了。也可以手动New，并选择python的安装目录
+
+.. image:: ../images/2.4.png
+    :width: 913 
+
+Pydev功能展示
+++++++++++++++++++
+
+安装后就可以使用Pydev创建python工程了。这里选Pydev工程，
+
+.. image:: ../images/2.5.png
+    :width: 525 
+
+把新建工程命名为 MyPython
+    
+.. image:: ../images/2.6.png
+    :width: 525  
+
+不选工程间的引用，并点击Finish，会在workspace下产生新的工程
+    
+.. image:: ../images/2.7.png
+    :width: 525      
+
+创建完工程后，可以添加python module，或python package。这里直接添加一个python module，产生一个新的py文件：
+
+.. image:: ../images/2.8.png
+    :width: 679 
+
+输入文件名，HelloWorld，并选择Module Main，
+    
+.. image:: ../images/2.9.png
+    :width: 525    
+
+第一个py程序像这样：
+
+.. code-block:: python
+    :linenos:
+
+    #coding:utf-8
+    '''
+    Created on 2015-3-10
+    @author: vincent
+    '''
+    
+    if __name__ == '__main__':
+        print "Hello world."
+        pass    
+
+当这个python以主模块运行时(即python xxx.py直接调用)，__name__为__main__，如果是被其他模块import的，则不为__main__。这样可以方便调试每个模块。
+
+点击运行，选择 Python Run， 就可以在console上看到输出了。
+        
+**自动补全**
+
+pydev提供了代码自动提示功能，按Alt+/键能列出所有匹配项
+
+.. image:: ../images/2.10.png
+    :width: 831 
+
+鼠标移到函数上，还能显示快捷帮助
+
+.. image:: ../images/2.11.png
+    :width: 481     
+
+**自带调试器**
+
+设置好断点，并点击Debug图标，就可以开始调试了
+
+.. image:: ../images/2.12.png
+    :width: 1142
+    
+
+PyCharm
+----------------------
+
+这是一款由JetBrains打造的软件，号称是python编程的利器，JetBrains还出过IntelliJ IDEA、AppCode等好用的IDE。
+
+PyCharm是收费软件，提供30天免费试用。下面是PyCharm的截图，
+
+* 智能提示
+
+.. image:: ../images/2.13.png
+    :width: 1000  
+
+* 代码定位
+    
+.. image:: ../images/2.14.png
+    :width: 1000
+
+* 代码重构
+    
+.. image:: ../images/2.15.png
+    :width: 1000
+
+* 调试
+    
+.. image:: ../images/2.16.png
+    :width: 1000    
+
+.. _点击下载pydev: http://120.198.244.31:9999/xz.cr173.com/soft1/PyDev.zip
+.. _ez_setup: https://bootstrap.pypa.io/ez_setup.py
+.. _get_pip: https://bootstrap.pypa.io/get-pip.py
+.. _Pypi: https://pypi.python.org/pypi
+.. _github: https://github.com
+.. _Unofficial Windows Binaries: http://www.lfd.uci.edu/~gohlke/pythonlibs/
+

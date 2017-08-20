@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2. python环境搭建 &mdash; Python入门 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Python入门 1.0.0 documentation" href="index.html" />
+    <link rel="next" title="3. python语言基础语法" href="chapter3.html" />
+    <link rel="prev" title="1. 引言" href="chapter1.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="chapter3.html" title="3. python语言基础语法"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="chapter1.html" title="1. 引言"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Python入门 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">2. python环境搭建</a><ul>
+<li><a class="reference internal" href="#id1">2.1. 安装python环境</a></li>
+<li><a class="reference internal" href="#id2">2.2. 安装python扩展模块</a><ul>
+<li><a class="reference internal" href="#id3">2.2.1. 手动安装</a></li>
+<li><a class="reference internal" href="#easy-install">2.2.2. easy_install安装和使用</a></li>
+<li><a class="reference internal" href="#pip">2.2.3. pip安装和使用[<strong>推荐</strong>]</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#eclipse-pydev">2.3. Eclipse+Pydev环境搭建</a><ul>
+<li><a class="reference internal" href="#pydev">2.3.1. 安装Pydev</a></li>
+<li><a class="reference internal" href="#id4">2.3.2. 设置python</a></li>
+<li><a class="reference internal" href="#id5">2.3.3. Pydev功能展示</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pycharm">2.4. PyCharm</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="chapter1.html"
+                        title="previous chapter">1. 引言</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="chapter3.html"
+                        title="next chapter">3. python语言基础语法</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/chapter2.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="python">
+<h1>2. python环境搭建<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<p>python发展到目前主要形成两个版本分析,2.7.x系统和3.x系列。由于两个系列之间的语法存在较大差异，所以建议选择一个分支。如果你要兼容以前老版本(一般redhat系的服务器操作系统随系统安装的python版本都是2.7以下的)建议选择2.7分支学习。如果你是从头学习python，并且只在比较新的系统上运行，那可以使用3.x的语法，设计更合理，使用更加简洁，目前支持的库也比较齐全了。</p>
+<div class="section" id="id1">
+<h2>2.1. 安装python环境<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>我们这里选择2.7.x的语法。在*NIX系统下默认已经安装有python环境了，只是python的交互shell比较弱，可以再安装个ipython软件，可以智能补全，高亮等。</p>
+<p>这里，我们主要介绍window下的安装步骤:</p>
+<ol class="arabic simple">
+<li>下载python2.7安装包</li>
+<li>安装python</li>
+<li>添加到系统路径，如python安装到 <tt class="docutils literal"><span class="pre">C:\python27</span></tt> 下，则添加 <tt class="docutils literal"><span class="pre">;C:\Python27;C:\Python27\Scripts</span></tt> 到系统环境变量Path的后面，后面那个路径一般是easy_install，pip等扩展工具安装的目录。</li>
+</ol>
+<p>安装完python包后，python自带一个交互式shell，一个命令行，及一些文档。此时就可以开始根据“Python Manuals&#8221;文档中的Tutorial来快速入门了。</p>
+<a class="reference internal image-reference" href="_images/2.0.1.png"><img alt="_images/2.0.1.png" src="_images/2.0.1.png" style="width: 409px;" /></a>
+<p>Python Shell界面</p>
+<a class="reference internal image-reference" href="_images/2.0.2.png"><img alt="_images/2.0.2.png" src="_images/2.0.2.png" style="width: 685px;" /></a>
+<p>使用tab或 Alt+/ 进行补全提示，使用alt+p和alt+n进行历史命令选择</p>
+</div>
+<div class="section" id="id2">
+<h2>2.2. 安装python扩展模块<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>这里介绍如何在python下安装扩展模块。python跟java一样，拥有很多库，基本上你想用的库都能在python官网上找到。python模块的安装一般有三种:</p>
+<ul class="simple">
+<li>只有单个py文件，可以直接拷贝到 <tt class="docutils literal"><span class="pre">Lib/site-package</span></tt> 下，</li>
+<li>下载tar格式的扩展包，并使用扩展包中的setup.py(一般正规的发布都会带这个脚本)安装</li>
+<li>window下，有 <a class="reference external" href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">Unofficial Windows Binaries</a> 的exe安装包(目前已变为whl文件，使用pip可以离线安装)</li>
+<li>使用pip,easy_install等自动化工具，自动搜索、下载、安装所需的模块</li>
+</ul>
+<p>注意，这执行pip或easy_install命令时，要把Scripts路径设置到系统路径下，像前面提到的那样。下面主要介绍第2, 4方法</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">最新版本的2.7.9已经默认安装上easy_install和pip了。只要加 <tt class="docutils literal"><span class="pre">;C:\Python27;C:\Python27\Scripts</span></tt> 到系统Path里就行了。</p>
+</div>
+<div class="section" id="id3">
+<h3>2.2.1. 手动安装<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>从 <a class="reference external" href="https://pypi.python.org/pypi">Pypi</a> 或 <a class="reference external" href="https://github.com">github</a> 等地方下载tar包，并解压</li>
+<li>python setup.py install</li>
+</ol>
+</div>
+<div class="section" id="easy-install">
+<h3>2.2.2. easy_install安装和使用<a class="headerlink" href="#easy-install" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>下载 <a class="reference external" href="https://bootstrap.pypa.io/ez_setup.py">ez_setup</a> 脚本</li>
+<li>python ez_setup</li>
+<li>easy_install xxx</li>
+</ol>
+</div>
+<div class="section" id="pip">
+<h3>2.2.3. pip安装和使用[<strong>推荐</strong>]<a class="headerlink" href="#pip" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">下载 <a class="reference external" href="https://bootstrap.pypa.io/get-pip.py">get_pip</a> 脚本</p>
+</li>
+<li><p class="first">python get-pip.py</p>
+</li>
+<li><p class="first">pip提供更多安装模块选项:</p>
+<div class="highlight-python"><div class="highlight"><pre>安裝：pip install xxx
+更新：pip install -U xxx
+移除：pip uninstall xxx
+搜索：pip search xxx
+帮助：pip help
+</pre></div>
+</div>
+</li>
+</ol>
+<p>例如，要安装sphinx文档编写工具，则使用如下命令:</p>
+<div class="highlight-python"><div class="highlight"><pre>pip install sphinx
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="eclipse-pydev">
+<h2>2.3. Eclipse+Pydev环境搭建<a class="headerlink" href="#eclipse-pydev" title="Permalink to this headline">¶</a></h2>
+<p>作为老牌的IDE，Eclipse几乎所有的编程语言都有相应的插件，而Python语言对应的是Pydev。</p>
+<div class="section" id="pydev">
+<h3>2.3.1. 安装Pydev<a class="headerlink" href="#pydev" title="Permalink to this headline">¶</a></h3>
+<p>从网站下载pydev的压缩包[<a class="reference external" href="http://120.198.244.31:9999/xz.cr173.com/soft1/PyDev.zip">点击下载pydev</a>  ]，解压出来会有feature和plugin两个目录，把它与Eclipse安装目录下的这几个目录合并就行了。</p>
+<p>另外也可以使用Eclipse的安装插件的功能</p>
+<ul class="simple">
+<li>在Eclipse中找到Help菜单，进入Install New Software…选项。</li>
+</ul>
+<a class="reference internal image-reference" href="_images/2.1.png"><img alt="_images/2.1.png" src="_images/2.1.png" style="width: 705px;" /></a>
+<ul class="simple">
+<li>点击Add…，Name可以随便是什么，我输入的是PyDev，Location是http://pydev.org/updates。点击OK。</li>
+</ul>
+<a class="reference internal image-reference" href="_images/2.2.png"><img alt="_images/2.2.png" src="_images/2.2.png" style="width: 485px;" /></a>
+<ul class="simple">
+<li>等待一下，便可以在选择栏里看到各个选项。</li>
+</ul>
+<a class="reference internal image-reference" href="_images/2.3.png"><img alt="_images/2.3.png" src="_images/2.3.png" style="width: 302px;" /></a>
+<ul class="simple">
+<li>选择PyDev，然后一路Next，进入安装路径选择界面，使用默认设置，然后Finish。PyDev安装好后，需要重启Eclipse。</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>2.3.2. 设置python<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>PyDev安装好之后，需要配置解释器。在 Eclipse 菜单栏中，选择Window &gt; Preferences &gt; Pydev &gt; Interpreter – Python，在此配置 Python。首先需要添加已安装的解释器，如果python已经配置了系统环境变量，这里只要点击auto config就行了。也可以手动New，并选择python的安装目录</p>
+<a class="reference internal image-reference" href="_images/2.4.png"><img alt="_images/2.4.png" src="_images/2.4.png" style="width: 913px;" /></a>
+</div>
+<div class="section" id="id5">
+<h3>2.3.3. Pydev功能展示<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>安装后就可以使用Pydev创建python工程了。这里选Pydev工程，</p>
+<a class="reference internal image-reference" href="_images/2.5.png"><img alt="_images/2.5.png" src="_images/2.5.png" style="width: 525px;" /></a>
+<p>把新建工程命名为 MyPython</p>
+<a class="reference internal image-reference" href="_images/2.6.png"><img alt="_images/2.6.png" src="_images/2.6.png" style="width: 525px;" /></a>
+<p>不选工程间的引用，并点击Finish，会在workspace下产生新的工程</p>
+<a class="reference internal image-reference" href="_images/2.7.png"><img alt="_images/2.7.png" src="_images/2.7.png" style="width: 525px;" /></a>
+<p>创建完工程后，可以添加python module，或python package。这里直接添加一个python module，产生一个新的py文件：</p>
+<a class="reference internal image-reference" href="_images/2.8.png"><img alt="_images/2.8.png" src="_images/2.8.png" style="width: 679px;" /></a>
+<p>输入文件名，HelloWorld，并选择Module Main，</p>
+<a class="reference internal image-reference" href="_images/2.9.png"><img alt="_images/2.9.png" src="_images/2.9.png" style="width: 525px;" /></a>
+<p>第一个py程序像这样：</p>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#coding:utf-8</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Created on 2015-3-10</span>
+<span class="sd">@author: vincent</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;Hello world.&quot;</span>
+    <span class="k">pass</span>
+</pre></div>
+</td></tr></table></div>
+<p>当这个python以主模块运行时(即python xxx.py直接调用)，__name__为__main__，如果是被其他模块import的，则不为__main__。这样可以方便调试每个模块。</p>
+<p>点击运行，选择 Python Run， 就可以在console上看到输出了。</p>
+<p><strong>自动补全</strong></p>
+<p>pydev提供了代码自动提示功能，按Alt+/键能列出所有匹配项</p>
+<a class="reference internal image-reference" href="_images/2.10.png"><img alt="_images/2.10.png" src="_images/2.10.png" style="width: 831px;" /></a>
+<p>鼠标移到函数上，还能显示快捷帮助</p>
+<a class="reference internal image-reference" href="_images/2.11.png"><img alt="_images/2.11.png" src="_images/2.11.png" style="width: 481px;" /></a>
+<p><strong>自带调试器</strong></p>
+<p>设置好断点，并点击Debug图标，就可以开始调试了</p>
+<a class="reference internal image-reference" href="_images/2.12.png"><img alt="_images/2.12.png" src="_images/2.12.png" style="width: 1142px;" /></a>
+</div>
+</div>
+<div class="section" id="pycharm">
+<h2>2.4. PyCharm<a class="headerlink" href="#pycharm" title="Permalink to this headline">¶</a></h2>
+<p>这是一款由JetBrains打造的软件，号称是python编程的利器，JetBrains还出过IntelliJ IDEA、AppCode等好用的IDE。</p>
+<p>PyCharm是收费软件，提供30天免费试用。下面是PyCharm的截图，</p>
+<ul class="simple">
+<li>智能提示</li>
+</ul>
+<a class="reference internal image-reference" href="_images/2.13.png"><img alt="_images/2.13.png" src="_images/2.13.png" style="width: 1000px;" /></a>
+<ul class="simple">
+<li>代码定位</li>
+</ul>
+<a class="reference internal image-reference" href="_images/2.14.png"><img alt="_images/2.14.png" src="_images/2.14.png" style="width: 1000px;" /></a>
+<ul class="simple">
+<li>代码重构</li>
+</ul>
+<a class="reference internal image-reference" href="_images/2.15.png"><img alt="_images/2.15.png" src="_images/2.15.png" style="width: 1000px;" /></a>
+<ul class="simple">
+<li>调试</li>
+</ul>
+<a class="reference internal image-reference" href="_images/2.16.png"><img alt="_images/2.16.png" src="_images/2.16.png" style="width: 1000px;" /></a>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="chapter3.html" title="3. python语言基础语法"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="chapter1.html" title="1. 引言"
+             >previous</a> |</li>
+        <li><a href="index.html">Python入门 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 俞伟山.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

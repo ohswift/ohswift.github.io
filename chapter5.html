@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>5. TODO: 语言的特性与思想 &mdash; Python入门 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Python入门 1.0.0 documentation" href="index.html" />
+    <link rel="prev" title="4. python常见应用" href="chapter4.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="chapter4.html" title="4. python常见应用"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Python入门 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">5. TODO: 语言的特性与思想</a><ul>
+<li><a class="reference internal" href="#id1">5.1. 尾递归和迭代</a></li>
+<li><a class="reference internal" href="#lambda">5.2. lambda</a></li>
+<li><a class="reference internal" href="#filter-map-reduce">5.3. filter-map-reduce</a></li>
+<li><a class="reference internal" href="#id2">5.4. 惰性求值与流</a></li>
+<li><a class="reference internal" href="#continuation">5.5. continuation-阴与阳</a></li>
+<li><a class="reference internal" href="#id3">5.6. 自省</a></li>
+<li><a class="reference internal" href="#id4">5.7. 自举</a></li>
+<li><a class="reference internal" href="#id5">5.8. 元语言编程</a></li>
+<li><a class="reference internal" href="#id6">5.9. 自己编写一个解释器?</a></li>
+<li><a class="reference internal" href="#id7">5.10. 自己编写一个编译器?</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="chapter4.html"
+                        title="previous chapter">4. python常见应用</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/chapter5.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="todo">
+<h1>5. TODO: 语言的特性与思想<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>5.1. 尾递归和迭代<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="lambda">
+<h2>5.2. lambda<a class="headerlink" href="#lambda" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="filter-map-reduce">
+<h2>5.3. filter-map-reduce<a class="headerlink" href="#filter-map-reduce" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id2">
+<h2>5.4. 惰性求值与流<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="continuation">
+<h2>5.5. continuation-阴与阳<a class="headerlink" href="#continuation" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id3">
+<h2>5.6. 自省<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id4">
+<h2>5.7. 自举<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id5">
+<h2>5.8. 元语言编程<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id6">
+<h2>5.9. 自己编写一个解释器?<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id7">
+<h2>5.10. 自己编写一个编译器?<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="chapter4.html" title="4. python常见应用"
+             >previous</a> |</li>
+        <li><a href="index.html">Python入门 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 俞伟山.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>
